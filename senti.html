@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>NLP APP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>NLP APP</h1>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"></div>
+							<h2>Sentiment Analysis</h2>
+							<p>Sentiment analysis, also known as opinion mining,
+								is a Natural Language Processing (NLP) technique
+								used to determine the emotional tone behind a piece of text.
+								It classifies the sentiment as positive, negative, or neutral
+								and sometimes offers a finer-grained assessment,
+								such as very positive or very negative.</p>
+							<form action="/perform_sentiment" method="POST">
+                                <label>Type your Text here</label><br>
+                                <textarea name="senti_text"></textarea><br>
+                                <input type="submit" value="Perform Sentiment Analysis">
+                            </form>
+
+                                {% if response %}
+                                    <h3>Sentiment Analysis Results:</h3>
+                                    <pre><h3>{{response}}</h3></pre>
+                                {% endif %}
+							<p>What would you like to do ?</p><br>
+							<ul>
+								<li><a href="/ner">NER</a></li>
+								<li><a href="/senti"> Sentiment Analysis</a></li>
+								<li><a href="/lange"> Language Detection</a></li>
+								<li><a href="/">LogOut</a></li>
+						  	</ul>
+
+						</div>
+
+					</section>
+			</div>
+
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li>
+							</ul>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
